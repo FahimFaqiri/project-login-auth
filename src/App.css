@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  /* root variables */
+  --primary-bg: rgb(78, 78, 78);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  font-family: "Anton", sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul,
+li {
+  font-family: "Teko", sans-serif;
+}
+
+/* The navbar component */
+.nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.nav ul {
+  width: 100%;
+  font-size: 1.5rem;
+  overflow: hidden;
+  background-color: #333;
+  list-style-type: none;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav li:first-child {
+  margin-left: 10px;
+}
+
+.nav li a {
+  display: block;
   color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.nav li a:hover:not(.active) {
+  background-color: #111;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.active {
+  background-color: #4caf50;
 }
+
+.loginBtn {
+  float: right;
+  margin-right: 10px;
+}
+
+/* The main component */
+.header {
+  padding: 60px;
+  background-color: rgb(42, 100, 122);
+}
+
+/* Media queries */
