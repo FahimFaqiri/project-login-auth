@@ -18,13 +18,20 @@ h3,
 h4,
 h5,
 h6,
+a,
+label,
 span {
-  font-family: "Anton", sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
 }
 
 ul,
 li {
   font-family: "Teko", sans-serif;
+  list-style-type: none;
+}
+
+label {
+  font-weight: bold;
 }
 
 body {
@@ -32,17 +39,16 @@ body {
   height: 100vh;
 }
 
-/* The navbar component */
+/*-------------------- The navbar component ---------------------*/
 .nav {
   display: flex;
 }
 
 .nav ul {
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 1rem;
   overflow: hidden;
   background-color: var(--nav-bg);
-  list-style-type: none;
 }
 
 .nav li {
@@ -56,8 +62,8 @@ body {
 .nav li a {
   display: block;
   color: white;
-  text-align: center;
   padding: 14px 16px;
+  text-align: center;
   text-decoration: none;
 }
 
@@ -74,11 +80,11 @@ body {
   margin-right: 10px;
 }
 
-/* The main component */
-
+/*-------------------- The main component ---------------------*/
 .main {
   display: flex;
-  height: 100vh;
+  width: 100%;
+  height: 800px;
   justify-content: center;
   align-items: center;
 }
@@ -88,10 +94,135 @@ body {
   -moz-box-shadow: 0px 0px 3px 20px rgba(0, 0, 0, 0.06);
   box-shadow: 0px 0px 3px 20px rgba(0, 0, 0, 0.06);
   background-color: var(--card-color);
+  width: 50%;
+}
+
+.column__align {
+  width: 100%;
+  height: 100%;
   display: flex;
-  width: 50vw;
-  height: 50vh;
-  border-radius: 1px;
+  justify-content: center;
+}
+
+.column {
+  max-width: 50%;
+}
+
+/*-------------------- The left component ---------------------*/
+.button,
+.left__column label,
+.remember__me-link {
+  font-weight: bold;
+}
+.left__column {
+  padding: 100px 75px;
+}
+
+.forgot__pass-link,
+.sign__up-text a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: blue;
+}
+
+.button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.left__column label {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.google__login-btn,
+.login__btn {
+  background-color: white;
+  border: 1px solid #e7e7e7;
+  color: black;
+  display: block;
+  width: 100%;
+  padding: 12px 0px;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
+.login__btn {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  background-color: rgb(6, 6, 49);
+}
+
+.link__align {
+  display: flex;
+  margin-bottom: 25px;
+  justify-content: space-between;
+}
+
+.sign__up-text {
+  text-align: center;
+  font-size: 0.8rem;
+}
+/*-------------------- The right component ---------------------*/
+.right__column {
+  /* padding: 75px 0px; */
+  padding: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.text__box {
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.text__box h3 {
+  font-family: "Rubik", sans-serif;
 }
 
 /* Media queries */
+@media screen and (max-width: 1100px) {
+  .card {
+    width: 75%;
+  }
+  .column {
+    display: block;
+    padding: 0px;
+    max-width: 100%;
+  }
+  .column__align {
+    display: block;
+  }
+  .left__column {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .right__column {
+    text-align: center;
+  }
+  .text__box {
+    margin-bottom: 10px;
+  }
+}
