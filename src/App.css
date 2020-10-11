@@ -90,9 +90,9 @@ body {
 }
 
 .card {
-  -webkit-box-shadow: 0px 0px 3px 20px rgba(0, 0, 0, 0.06);
-  -moz-box-shadow: 0px 0px 3px 20px rgba(0, 0, 0, 0.06);
-  box-shadow: 0px 0px 3px 20px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 0px 3px 20px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 0px 3px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 3px 20px rgba(0, 0, 0, 0.05);
   background-color: var(--card-color);
   width: 50%;
 }
@@ -113,9 +113,19 @@ body {
 .left__column label,
 .remember__me-link {
   font-weight: bold;
+  font-size: 0.8rem;
 }
+
+.left__column label {
+  margin: 10px;
+}
+
 .left__column {
   padding: 100px 75px;
+}
+
+.left__column {
+  border-right: 2px solid rgba(128, 128, 128, 0.158);
 }
 
 .forgot__pass-link,
@@ -136,6 +146,19 @@ body {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+}
+
+.google__btn-align {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  line-height: 1;
+}
+
+.google__logo {
+  width: 50px;
+  position: absolute;
+  left: 40px;
 }
 
 .left__column label {
@@ -167,11 +190,21 @@ select {
   margin-bottom: 50px;
 }
 
+.google__login-btn:hover {
+  background-color: rgb(6, 6, 49);
+  color: white;
+  transition: 0.2s ease-in;
+}
+
 .login__btn {
   color: white;
   font-size: 0.9rem;
   font-weight: bold;
   background-color: rgb(6, 6, 49);
+}
+
+.login__btn:hover {
+  background-color: rgba(6, 6, 49, 0.925);
 }
 
 .link__align {
@@ -191,6 +224,17 @@ select {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+.logo {
+  width: 50px;
+  height: 27px;
+}
+
+.align__logo {
+  display: flex;
+  position: relative;
+  right: 50px;
 }
 
 .text__box {
@@ -224,5 +268,9 @@ select {
   }
   .text__box {
     margin-bottom: 10px;
+  }
+  .align__logo {
+    display: block;
+    position: static;
   }
 }

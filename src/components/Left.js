@@ -1,9 +1,13 @@
 import React from "react";
+import google_logo from "./images/google_logo.svg"
 
 function Left() {
   return (
     <div className="column left__column">
+      <div className="google__btn-align">
+        <img className="google__logo" src={google_logo} alt=""/>
       <button className="button google__login-btn">Log in with Google</button>
+      </div>
       <label htmlFor="mail">Email</label>
       <input
         type="email"
@@ -20,7 +24,10 @@ function Left() {
         minLength="6"
       />
       <div className="link__align">
-        <p className="remember__me-link">Remember me</p>
+        <div>
+        <input type="checkbox" name="remember__me-link" id="remember__me-link"/>
+        <label htmlFor="remember__me-link">Remember me</label>
+        </div>
         <a className="forgot__pass-link" href="#">
           Forgot password
         </a>
